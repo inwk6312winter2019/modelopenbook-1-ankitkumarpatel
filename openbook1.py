@@ -100,17 +100,17 @@ def access_list(filename):
 
 
 
-#task 1 starts here
+#task 1 starts here:
 result = list_ifname_ip('running-config.cfg')
 print("Required dictionary is as below:\n")
 print(result)
 
 
-#task 2 starts here
+#task 2 starts here:
 new_config_file('running-config.cfg')
 
 
-#task 3 starts here
+#task 3 starts here:
 access_list('running-config.cfg')
 
 
