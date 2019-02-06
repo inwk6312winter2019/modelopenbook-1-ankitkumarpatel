@@ -5,7 +5,7 @@
 
 
 def list_ifname_ip(filename):
-    
+    """function for task1"""
     fin = open(filename)
     dic = dict()
     for line in fin:
@@ -25,7 +25,7 @@ def list_ifname_ip(filename):
 
 
 def new_config_file(filename):
-    
+    """function for task2"""
     fout = open("new_config.cfg","wa")
     fin = open(filename,"r")
     for line in fin:
@@ -49,6 +49,7 @@ def new_config_file(filename):
 
 
 def access_list(filename):
+    """function for task3"""
     fin = open(filename,'r')
     global_access=[]
     transit_access_in=[]
@@ -84,7 +85,7 @@ def access_list(filename):
             fw_management_access_in.extend([lst3])
 
 
-    print("access list for global_access:")
+    print("\naccess list for global_access:")
     print(global_access)
 
 
@@ -96,16 +97,20 @@ def access_list(filename):
     print(fw_management_access_in)
 
 
-"""
 
+
+
+#task 1 starts here
 result = list_ifname_ip('running-config.cfg')
-
+print("Required dictionary is as below:\n")
 print(result)
 
+
+#task 2 starts here
 new_config_file('running-config.cfg')
 
 
-"""
+#task 3 starts here
 access_list('running-config.cfg')
 
 
