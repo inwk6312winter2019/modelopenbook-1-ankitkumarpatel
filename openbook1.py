@@ -29,10 +29,10 @@ def new_config_file(filename):
     fin = open(filename,"r")
     for line in fin:
         if 'ip address' in line:
-            if '172.0' in line:
+            if '172.' in line:
 	        line = line.replace("172.", "10.")
                
-	    if '192.0' in line:
+	    if '192.' in line:
 		line = line.replace("192.", "10.")
                
 	    if '255.255.0.0' in line:
@@ -45,7 +45,7 @@ def new_config_file(filename):
     fout.close()
 
 
-#list_ifname_ip('running-config.cfg')
+list_ifname_ip('running-config.cfg')
 
 new_config_file('running-config.cfg')
 
