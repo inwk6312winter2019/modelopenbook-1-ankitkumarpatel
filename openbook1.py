@@ -10,10 +10,14 @@ def list_ifname_ip(filename):
     dic = dict()
     for line in file:
         line = line.split()
-        if any(line) == 'nameif'
-            word = word.strip()
-        if  
-        dic[nameif]=(IPaddress,NetMask)
+        for i in line:
+            if any(line[i] == 'nameif'):
+                nameif = line[i+1]
+            if any(line[i] == 'ip')
+                IPaddress = line[i+2]
+                NetMask = line[i+3]
+            if  
+            dic[nameif]=(IPaddress,NetMask)
 return dic
 
 
